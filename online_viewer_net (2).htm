@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stakeholder Analysis: Nuclear Energy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fb;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #1f3b77;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #142244;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #f5f7fb;
+      margin-right: 15px;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 950px;
+      margin: 20px auto 40px;
+      padding: 0 15px 40px;
+      background-color: white;
+      box-shadow: 0 0 8px rgba(0,0,0,0.08);
+      border-radius: 8px;
+    }
+    section {
+      padding: 20px 15px;
+      border-bottom: 1px solid #e1e4ee;
+    }
+    h1, h2, h3 {
+      color: #1f3b77;
+      margin-top: 0;
+    }
+    h2 {
+      border-left: 4px solid #1f3b77;
+      padding-left: 8px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+    .tagline {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+    .stakeholder-type {
+      display: inline-block;
+      padding: 2px 6px;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+    .direct-label { background-color: #2b8a3e; }
+    .indirect-label { background-color: #ff9800; }
+    .small-label {
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    .bib-entry {
+      margin-bottom: 18px;
+    }
+    .bib-citation {
+      font-style: italic;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #555;
+      padding: 15px;
+    }
+    ul {
+      margin-top: 5px;
+    }
+    .stakeholder-card {
+      margin-bottom: 18px;
+      padding: 8px 10px 10px;
+      border-radius: 6px;
+      background-color: #f9faff;
+      border: 1px solid #e0e4f0;
+      transition: box-shadow 0.2s, background-color 0.2s;
+    }
+    .stakeholder-card.highlight {
+      box-shadow: 0 0 10px rgba(31,59,119,0.4);
+      background-color: #eef2ff;
+    }
+    .stakeholder-details {
+      margin-top: 5px;
+      display: none; /* collapsed by default */
+    }
+    .stakeholder-card.open .stakeholder-details {
+      display: block;
+    }
+    .filter-buttons {
+      margin: 10px 0 15px;
+    }
+    .filter-buttons button {
+      margin-right: 8px;
+      padding: 6px 10px;
+      font-size: 0.85rem;
+      border-radius: 4px;
+      border: 1px solid #1f3b77;
+      background-color: white;
+      cursor: pointer;
+      color: #1f3b77;
+    }
+    .filter-buttons button.active {
+      background-color: #1f3b77;
+      color: white;
+    }
+    /* stakeholder map */
+    .stakeholder-map {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      margin: 10px 0 20px;
+    }
+    .map-card {
+      background-color: #eef1fb;
+      border-radius: 6px;
+      padding: 8px;
+      border: 1px solid #d7ddf5;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: transform 0.1s, box-shadow 0.1s, background-color 0.1s;
+    }
+    .map-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      background-color: #e1e6ff;
+    }
+    .map-title {
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+    .map-tag {
+      font-size: 0.75rem;
+      padding: 1px 4px;
+      border-radius: 4px;
+      color: #fff;
+    }
+    .map-tag.direct { background-color: #2b8a3e; }
+    .map-tag.indirect { background-color: #ff9800; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Stakeholder Analysis: Nuclear Energy</h1>
+    <p class="tagline">Writing Project 2 – Neutral Stakeholder Overview and Annotated Bibliography</p>
+  </header>
+
+  <nav>
+    <a href="#intro">Home / Introduction</a>
+    <a href="#overview">Stakeholder Overview</a>
+    <a href="#stakeholders">Stakeholder Groups</a>
+    <a href="#synthesis">What This Shows</a>
+    <a href="#annotated-bib">Annotated Bibliography (WP2)</a>
+    <a href="#works-cited">Works Cited</a>
+    <a href="#ai-use">AI Use Disclosure</a>
+  </nav>
+
+  <main>
+    <!-- Introduction -->
+    <section id="intro">
+      <h2>Introduction: Nuclear Energy and Stakeholders</h2>
+      <p>
+        Nuclear energy is one of the most debated energy sources in the world today. Some people and organizations
+        see nuclear power as a clean and reliable way to generate electricity while reducing carbon emissions and
+        fighting climate change. Others focus on risks like accidents, radioactive waste, security threats, and the
+        high costs of building and maintaining nuclear plants. Because the issue is so complex, it involves many
+        different groups of people, governments, and organizations, all with their own interests and levels of power.
+      </p>
+      <p>
+        The purpose of this project is to provide a <strong>neutral overview</strong> of the nuclear energy debate by
+        identifying major stakeholder groups and explaining what they value, what they might gain or lose, and how
+        much influence they have in the conversation. This website does not argue for or against nuclear energy.
+        Instead, it aims to show how the interests and concerns of different stakeholders shape the way nuclear power
+        is discussed and decided on.
+      </p>
+      <p>
+        This stakeholder analysis is part of Writing Project 2 for my English class and is supported by research from
+        highly credible sources, including the U.S. Government Accountability Office (GAO), the International Atomic
+        Energy Agency (IAEA), Pew Research Center, Bisconti Research, and Greenpeace.
+      </p>
+    </section>
+
+    <!-- Stakeholder Overview -->
+    <section id="overview">
+      <h2>Stakeholder Overview</h2>
+      <p>
+        A <strong>stakeholder</strong> is any person, group, or organization that is affected by nuclear energy or has
+        the ability to influence how it is used, regulated, or understood. In the case of nuclear energy, stakeholders
+        include governments, regulatory agencies, power companies, international organizations, environmental groups,
+        local communities, scientists, and the general public, along with future generations and the environment.
+      </p>
+      <p>
+        For this analysis, I divide stakeholders into two main categories:
+      </p>
+      <ul>
+        <li><strong>Direct stakeholders</strong> – those who are closely involved in nuclear energy operations, policy, safety, or economics.</li>
+        <li><strong>Indirect stakeholders</strong> – those who are not directly involved in the nuclear industry but are still affected by nuclear policy, public opinion, or long-term environmental consequences.</li>
+      </ul>
+      <p>
+        Looking at both direct and indirect stakeholders shows how wide-reaching nuclear energy decisions can be.
+        Below is a simple “stakeholder map” that lets you jump to each group.
+      </p>
+
+      <!-- Stakeholder Map -->
+      <div class="stakeholder-map">
+        <div class="map-card" data-target="gov-reg">
+          <div class="map-title">Governments & Regulators</div>
+          <span class="map-tag direct">Direct</span>
+          <div style="font-size:0.8rem;">Policy, safety rules, national goals</div>
+        </div>
+        <div class="map-card" data-target="industry">
+          <div class="map-title">Nuclear Companies & Utilities</div>
+          <span class="map-tag direct">Direct</span>
+          <div style="font-size:0.8rem;">Plant owners and operators</div>
+        </div>
+        <div class="map-card" data-target="intl-orgs">
+          <div class="map-title">International Organizations</div>
+          <span class="map-tag direct">Direct</span>
+          <div style="font-size:0.8rem;">IAEA, treaties, global standards</div>
+        </div>
+        <div class="map-card" data-target="env-groups">
+          <div class="map-title">Environmental Organizations</div>
+          <span class="map-tag direct">Direct</span>
+          <div style="font-size:0.8rem;">Environmental and climate advocacy</div>
+        </div>
+        <div class="map-card" data-target="local-communities">
+          <div class="map-title">Local Communities</div>
+          <span class="map-tag direct">Direct</span>
+          <div style="font-size:0.8rem;">People living near plants</div>
+        </div>
+        <div class="map-card" data-target="workers">
+          <div class="map-title">Nuclear Workers & Unions</div>
+          <span class="map-tag direct">Direct</span>
+          <div style="font-size:0.8rem;">Jobs and workplace safety</div>
+        </div>
+        <div class="map-card" data-target="scientists">
+          <div class="map-title">Scientists & Experts</div>
+          <span class="map-tag direct">Direct</span>
+          <div style="font-size:0.8rem;">Research and technical knowledge</div>
+        </div>
+        <div class="map-card" data-target="public">
+          <div class="map-title">General Public</div>
+          <span class="map-tag indirect">Indirect</span>
+          <div style="font-size:0.8rem;">Voters and electricity customers</div>
+        </div>
+        <div class="map-card" data-target="energy-industries">
+          <div class="map-title">Other Energy Industries</div>
+          <span class="map-tag indirect">Indirect</span>
+          <div style="font-size:0.8rem;">Fossil fuels and renewables</div>
+        </div>
+        <div class="map-card" data-target="future-environment">
+          <div class="map-title">Future Generations & Environment</div>
+          <span class="map-tag indirect">Indirect</span>
+          <div style="font-size:0.8rem;">Long-term impacts</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stakeholder Groups -->
+    <section id="stakeholders">
+      <h2>Stakeholder Groups</h2>
+
+      <!-- Filter Buttons -->
+      <div class="filter-buttons">
+        <button id="btn-all" class="active">Show All</button>
+        <button id="btn-direct">Direct Stakeholders</button>
+        <button id="btn-indirect">Indirect Stakeholders</button>
+      </div>
+
+      <!-- Governments & Regulators -->
+      <article id="gov-reg" class="stakeholder-card direct">
+        <span class="stakeholder-type direct-label">Direct stakeholder</span>
+        <h3>National Governments and Nuclear Regulators</h3>
+        <div class="stakeholder-details">
+          <p>
+            National governments and nuclear regulatory agencies are some of the most powerful stakeholders in the nuclear
+            energy debate. In the United States, agencies like the Nuclear Regulatory Commission (NRC) and the Department
+            of Energy (DOE) help oversee nuclear power plants, safety rules, research, and waste management. A GAO report
+            on nuclear energy explains that both DOE and NRC are central to addressing research and development, safety and
+            security, and waste management issues related to nuclear energy (U.S. Government Accountability Office).
+          </p>
+          <p>
+            <span class="small-label">Interests:</span> Governments and regulators are interested in providing reliable
+            electricity, protecting public safety, maintaining national security, and meeting climate and energy goals.
+            They are also concerned with economic factors, such as the cost of nuclear power and the health of the nuclear
+            industry.
+          </p>
+          <p>
+            <span class="small-label">Influence:</span> Their influence is very high because they can approve or deny
+            licenses for nuclear plants, set safety standards, fund or defund nuclear research, and decide how nuclear
+            waste will be managed. Their decisions directly affect companies, communities, and the future of nuclear
+            energy.
+          </p>
+        </div>
+      </article>
+
+      <!-- Nuclear Companies & Utilities -->
+      <article id="industry" class="stakeholder-card direct">
+        <span class="stakeholder-type direct-label">Direct stakeholder</span>
+        <h3>Nuclear Power Companies and Utility Operators</h3>
+        <div class="stakeholder-details">
+          <p>
+            Nuclear power plants are owned and operated by companies and utilities that produce and sell electricity.
+            These companies invest in nuclear reactors, safety systems, fuel, and workers. Their main goal is to provide
+            reliable power while remaining financially stable. The GAO notes that financial challenges in competitive
+            power markets can affect nuclear plants' ability to stay profitable and continue operating (U.S. Government
+            Accountability Office).
+          </p>
+          <p>
+            <span class="small-label">Interests:</span> These companies are interested in keeping nuclear plants operating
+            safely and profitably, extending plant lifespans, and sometimes building new reactors, including advanced
+            designs like small modular reactors (SMRs). They are also concerned about regulations that may affect their
+            costs.
+          </p>
+          <p>
+            <span class="small-label">Influence:</span> Their influence is high because they control actual facilities and
+            jobs. They often lobby governments for supportive policies, subsidies, and favorable market conditions.
+          </p>
+        </div>
+      </article>
+
+      <!-- International Organizations -->
+      <article id="intl-orgs" class="stakeholder-card direct">
+        <span class="stakeholder-type direct-label">Direct stakeholder</span>
+        <h3>International Organizations (IAEA and Others)</h3>
+        <div class="stakeholder-details">
+          <p>
+            International organizations, especially the International Atomic Energy Agency (IAEA), play a major role in
+            nuclear safety and security. The IAEA promotes a global framework for safe and secure use of nuclear energy by
+            developing standards, offering guidance, and helping countries strengthen their safety systems ("Nuclear Safety
+            and Security").
+          </p>
+          <p>
+            <span class="small-label">Interests:</span> These organizations are interested in preventing nuclear
+            accidents, ensuring that nuclear materials are not used for weapons, protecting people and the environment,
+            and supporting peaceful uses of nuclear technology.
+          </p>
+          <p>
+            <span class="small-label">Influence:</span> Their influence is high at the international level. While they do
+            not directly operate reactors, their safety standards and recommendations strongly influence national laws and
+            policies.
+          </p>
+        </div>
+      </article>
+
+      <!-- Environmental Organizations -->
+      <article id="env-groups" class="stakeholder-card direct">
+        <span class="stakeholder-type direct-label">Direct stakeholder</span>
+        <h3>Environmental Organizations</h3>
+        <div class="stakeholder-details">
+          <p>
+            Environmental organizations such as Greenpeace, Friends of the Earth, and other advocacy groups often take a
+            strong position on nuclear energy. Greenpeace, for example, describes nuclear power as "a dangerous waste of
+            time" and argues that it is unsafe, expensive, and a distraction from renewable energy ("Nuclear Power: A
+            Dangerous Waste of Time").
+          </p>
+          <p>
+            <span class="small-label">Interests:</span> These groups focus on protecting ecosystems, preventing pollution
+            and radioactive contamination, promoting renewable energy sources, and addressing climate change in ways they
+            see as safe and sustainable.
+          </p>
+          <p>
+            <span class="small-label">Influence:</span> Their influence is medium. They do not make laws, but they shape
+            public opinion, organize campaigns, publish reports, and pressure governments and companies to change their
+            policies.
+          </p>
+        </div>
+      </article>
+
+      <!-- Local Communities -->
+      <article id="local-communities" class="stakeholder-card direct">
+        <span class="stakeholder-type direct-label">Direct stakeholder</span>
+        <h3>Local Communities Near Nuclear Plants</h3>
+        <div class="stakeholder-details">
+          <p>
+            People who live near nuclear power plants are directly affected by how those plants operate. They may benefit
+            from local jobs, tax revenue, and investments in the area, but they also face the risks of living close to a
+            nuclear facility.
+          </p>
+          <p>
+            <span class="small-label">Interests:</span> Local communities are interested in safety, clear emergency plans,
+            health and environmental protection, property values, and the stability of local employment.
+          </p>
+          <p>
+            <span class="small-label">Influence:</span> Their influence is medium. Communities can attend public hearings,
+            vote in local and national elections, organize community groups, and react strongly to proposed plant
+            expansions or closures. Surveys have shown that communities that host nuclear plants often have different
+            views than the general public (World Nuclear Association; Bisconti).
+          </p>
+        </div>
+      </article>
+
+      <!-- Nuclear Workers & Unions -->
+      <article id="workers" class="stakeholder-card direct">
+        <span class="stakeholder-type direct-label">Direct stakeholder</span>
+        <h3>Nuclear Industry Workers and Unions</h3>
+        <div class="stakeholder-details">
+          <p>
+            Engineers, technicians, plant operators, and other workers in the nuclear industry are directly involved in
+            day-to-day operations. Their jobs depend on the continued existence of nuclear power plants and related
+            activities.
+          </p>
+          <p>
+            <span class="small-label">Interests:</span> They are interested in job security, safe working conditions,
+            fair pay, and training. They want plants to operate safely while staying open so they can keep their
+            livelihoods.
+          </p>
+          <p>
+            <span class="small-label">Influence:</span> Workers and unions have medium influence. They may not write
+            regulations, but they play a critical role in safety culture and can voice concerns about unsafe practices or
+            plant closures.
+          </p>
+        </div>
+      </article>
+
+      <!-- Scientists & Experts -->
+      <article id="scientists" class="stakeholder-card direct">
+        <span class="stakeholder-type direct-label">Direct stakeholder</span>
+        <h3>Scientists, Engineers, and Energy Experts</h3>
+        <div class="stakeholder-details">
+          <p>
+            Scientists, engineers, and energy policy experts provide the technical knowledge that other stakeholders rely
+            on. They study reactor safety, radiation risks, waste storage, climate impacts, and energy systems. Their
+            research is often used in government reports and international assessments.
+          </p>
+          <p>
+            <span class="small-label">Interests:</span> Their interests include evidence-based policy, improving reactor
+            designs, reducing risks, and finding realistic ways to meet energy and climate goals.
+          </p>
+          <p>
+            <span class="small-label">Influence:</span> Their influence is high in terms of information and expertise.
+            While they may not make final decisions, their findings influence policymakers, regulators, and public
+            debates.
+          </p>
+        </div>
+      </article>
+
+      <!-- General Public -->
+      <article id="public" class="stakeholder-card indirect">
+        <span class="stakeholder-type indirect-label">Indirect stakeholder</span>
+        <h3>The General Public</h3>
+        <div class="stakeholder-details">
+          <p>
+            The general public includes voters and electricity customers who may not live near nuclear plants but are
+            still affected by energy policy, electricity prices, and climate change. Public opinion plays a big role in
+            whether elected officials support or oppose nuclear energy. A 2025 report from Pew Research Center found that
+            about six-in-ten U.S. adults now favor expanding nuclear power plants, and support has increased in both
+            political parties since 2020 ("Support for Expanding Nuclear Power Is Up in Both Parties Since 2020").
+          </p>
+          <p>
+            <span class="small-label">Interests:</span> The public is interested in safety, affordable electricity,
+            environmental protection, and trust in institutions to manage risks responsibly.
+          </p>
+          <p>
+            <span class="small-label">Influence:</span> Their influence is medium to high because public opinion affects
+            elections and the political choices that shape energy policy. Bisconti Research also reports that 72% of
+            Americans favor nuclear energy to some degree, suggesting that public attitudes may be shifting in a more
+            positive direction (Bisconti).
+          </p>
+        </div>
+      </article>
+
+      <!-- Competing Energy Industries -->
+      <article id="energy-industries" class="stakeholder-card indirect">
+        <span class="stakeholder-type indirect-label">Indirect stakeholder</span>
+        <h3>Competing Energy Industries (Fossil Fuels and Renewables)</h3>
+        <div class="stakeholder-details">
+          <p>
+            Companies in fossil fuel industries (coal, oil, natural gas) and renewable energy industries (solar, wind,
+            hydro) are also stakeholders in the nuclear debate. They compete with nuclear power for market share, policy
+            support, and investment.
+          </p>
+          <p>
+            <span class="small-label">Interests:</span> Fossil fuel companies may see nuclear as a competitor that can
+            reduce demand for coal or gas. Renewable companies may support or oppose nuclear depending on whether they see
+            it as a partner in providing low-carbon power or as a competitor for funding and policies.
+          </p>
+          <p>
+            <span class="small-label">Influence:</span> Their influence is high because these industries have strong
+            lobbying power and significant economic resources.
+          </p>
+        </div>
+      </article>
+
+      <!-- Future Generations & Environment -->
+      <article id="future-environment" class="stakeholder-card indirect">
+        <span class="stakeholder-type indirect-label">Indirect stakeholder</span>
+        <h3>Future Generations and the Environment</h3>
+        <div class="stakeholder-details">
+          <p>
+            Future generations and the environment are stakeholders even though they cannot speak for themselves.
+            Decisions about nuclear energy today will affect people and ecosystems far into the future. Nuclear power can
+            help reduce carbon emissions and limit climate change, which benefits future generations. At the same time,
+            radioactive waste remains dangerous for thousands of years, and nuclear accidents can cause long-term
+            environmental damage.
+          </p>
+          <p>
+            <span class="small-label">Interests:</span> Their interests include a stable climate, safe long-term storage
+            of waste, healthy ecosystems, and responsible use of technology.
+          </p>
+          <p>
+            <span class="small-label">Influence:</span> Their direct influence is low, but they are represented by
+            environmental organizations, scientists, policymakers, and international climate agreements.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Synthesis -->
+    <section id="synthesis">
+      <h2>What This Stakeholder Analysis Shows About the Nuclear Energy Debate</h2>
+      <p>
+        Looking at nuclear energy through the lens of stakeholders shows that the issue is more complicated than just
+        being “for” or “against” nuclear power. Governments and regulators must balance safety, energy reliability,
+        national security, and climate goals. Nuclear companies focus on plant operation, profit, and long-term
+        investments. Environmental organizations worry about accidents, waste, and long-term pollution, while some also
+        consider how nuclear fits into climate solutions.
+      </p>
+      <p>
+        The general public, local communities, and workers experience the effects of these decisions in their daily
+        lives, through job opportunities, electricity prices, and feelings of safety or risk. International
+        organizations like the IAEA help create standards that shape what “safe” nuclear energy looks like across
+        countries. Future generations and the environment will live with the long-term consequences of whatever path is
+        chosen.
+      </p>
+      <p>
+        This analysis helps prepare for future writing by showing that any discussion about nuclear energy has to take
+        multiple perspectives into account. Understanding stakeholders' interests, influence, and concerns makes it
+        easier to think critically about possible solutions or compromises in the nuclear energy debate.
+      </p>
+    </section>
+
+    <!-- Annotated Bibliography -->
+    <section id="annotated-bib">
+      <h2>Annotated Bibliography – Five New Sources for WP2 (MLA)</h2>
+
+      <div class="bib-entry">
+        <p class="bib-citation">
+          Bisconti, Ann Stouffer. “2025 National Nuclear Energy Public Opinion Survey: U.S. Public Support for Nuclear Energy Remains High.” 
+          <em>Bisconti Research, Inc.</em>, 18 June 2025, www.bisconti.com/blog/public-opinion-2025.
+        </p>
+        <p>
+          This article reports on the 2025 National Nuclear Energy Public Opinion Survey done by Bisconti Research.
+          It states that 72% of Americans favor nuclear energy, while 28% oppose it, and explains that support has
+          become more favorable over the past few decades. The report includes trends over time, descriptions of how
+          opinions vary by demographic groups, and discussion about how feeling informed affects support levels. It
+          provides charts and clear explanations of the main findings.
+        </p>
+        <p>
+          This source is trustworthy because Bisconti Research has been tracking public opinion on nuclear energy for many years and clearly explains its survey methods. 
+          It is helpful for understanding the general public as a stakeholder and how opinions about nuclear power are changing.
+          I can use this source to support claims about public support for nuclear energy and how that might influence policy.
+        </p>
+      </div>
+
+      <div class="bib-entry">
+        <p class="bib-citation">
+          Greenpeace USA. “Nuclear Power: A Dangerous Waste of Time.” <em>Greenpeace</em>, 18 June 2009, www.greenpeace.org/usa/climate/issues/nuclear/.
+        </p>
+        <p>
+          This webpage from Greenpeace USA explains why the organization opposes nuclear power. It argues that nuclear energy is
+          dangerous, expensive, and too slow to help with the climate crisis. The article also claims that nuclear power diverts money
+          and attention away from renewable energy sources like wind and solar. It lists problems such as accidents, radioactive waste,
+          and hidden costs around decommissioning and insurance.
+        </p>
+        <p>
+          Although Greenpeace is clearly biased against nuclear energy, it is still a very important stakeholder source because it shows
+          why some environmental groups strongly oppose nuclear power. This article helps me understand the arguments and concerns of
+          anti-nuclear environmental organizations. I can use this source when describing environmental stakeholders and their reasons
+          for resisting nuclear expansion.
+        </p>
+      </div>
+
+      <div class="bib-entry">
+        <p class="bib-citation">
+          International Atomic Energy Agency. “Nuclear Safety and Security.” <em>IAEA</em>, www.iaea.org/topics/nuclear-safety-and-security. Accessed 9 Dec. 2025.
+        </p>
+        <p>
+          This webpage from the International Atomic Energy Agency (IAEA) gives an overview of the international framework for nuclear
+          safety and security. It explains how the IAEA works with member states to create safety standards, provide guidance, and help
+          countries strengthen their nuclear safety and security systems. The page mentions treaties, conventions, and technical support
+          the IAEA offers to protect people and the environment from harmful effects of radiation.
+        </p>
+        <p>
+          This source is reliable because the IAEA is the main international organization responsible for nuclear safety and security.
+          It is useful for understanding how international organizations act as stakeholders in the nuclear energy debate. I can use this
+          source to support my explanations of how global safety standards influence national regulations and public trust.
+        </p>
+      </div>
+
+      <div class="bib-entry">
+        <p class="bib-citation">
+          Pew Research Center. “Support for Expanding Nuclear Power Is Up in Both Parties Since 2020.” <em>Pew Research Center</em>, 16 Oct. 2025, 
+          www.pewresearch.org/short-reads/2025/10/16/support-for-expanding-nuclear-power-is-up-in-both-parties-since-2020/.
+        </p>
+        <p>
+          This article from Pew Research Center summarizes recent survey data about American attitudes toward nuclear power. It reports
+          that about six-in-ten U.S. adults now favor expanding nuclear power plants and that support has increased among both Democrats
+          and Republicans since 2020. The article compares support for nuclear with support for renewable energy sources and discusses
+          how opinions have changed over time.
+        </p>
+        <p>
+          Pew is a nonpartisan research organization known for its high-quality surveys, so this source is very credible. It helps me
+          understand the general public’s views on nuclear energy and how public opinion can affect political decisions. I can use this
+          source to back up claims about increasing support for nuclear power and to show that public attitudes are an important part of
+          the stakeholder landscape.
+        </p>
+      </div>
+
+      <div class="bib-entry">
+        <p class="bib-citation">
+          U.S. Government Accountability Office. <em>Nuclear Energy</em>. U.S. Government Accountability Office, 2025, www.gao.gov/nuclear-energy.
+        </p>
+        <p>
+          This webpage from the U.S. Government Accountability Office (GAO) gives an overview of key issues facing the nuclear energy
+          sector in the United States. It explains how nuclear power contributes to the nation’s electricity supply and describes the
+          roles of federal agencies like DOE and NRC. The page discusses research and development, safety and security, waste
+          management, economics, and regulatory challenges. It also notes that both DOE and NRC could better address certain nuclear
+          energy issues.
+        </p>
+        <p>
+          The GAO is a trusted government watchdog agency that provides nonpartisan information to Congress and the public, so this
+          source is highly credible. It helps me understand the government and regulators as stakeholders and shows what kinds of
+          challenges they face. I can use this source to support explanations of policy, regulation, and economic pressures in the
+          nuclear sector.
+        </p>
+      </div>
+    </section>
+
+    <!-- Works Cited -->
+    <section id="works-cited">
+      <h2>Works Cited (New Sources for WP2)</h2>
+      <p>
+        Bisconti, Ann Stouffer. “2025 National Nuclear Energy Public Opinion Survey: U.S. Public Support for Nuclear Energy
+        Remains High.” <em>Bisconti Research, Inc.</em>, 18 June 2025, www.bisconti.com/blog/public-opinion-2025.
+      </p>
+      <p>
+        Greenpeace USA. “Nuclear Power: A Dangerous Waste of Time.” <em>Greenpeace</em>, 18 June 2009,
+        www.greenpeace.org/usa/climate/issues/nuclear/.
+      </p>
+      <p>
+        International Atomic Energy Agency. “Nuclear Safety and Security.” <em>IAEA</em>, www.iaea.org/topics/nuclear-safety-and-security.
+        Accessed 9 Dec. 2025.
+      </p>
+      <p>
+        Pew Research Center. “Support for Expanding Nuclear Power Is Up in Both Parties Since 2020.” <em>Pew Research Center</em>, 16 Oct. 2025,
+        www.pewresearch.org/short-reads/2025/10/16/support-for-expanding-nuclear-power-is-up-in-both-parties-since-2020/.
+      </p>
+      <p>
+        U.S. Government Accountability Office. <em>Nuclear Energy</em>. U.S. Government Accountability Office, 2025, www.gao.gov/nuclear-energy.
+      </p>
+      <p style="font-size:0.9rem; margin-top:15px;">
+        <em>Note: This list only includes the five new sources added for Writing Project 2. Sources from Writing Project 1 remain part of the overall ongoing annotated bibliography for the course.</em>
+      </p>
+    </section>
+
+    <!-- AI Use Disclosure -->
+    <section id="ai-use">
+      <h2>AI Use Disclosure</h2>
+      <p>
+        Some portions of this project, including help with brainstorming, organizing stakeholder groups, and drafting and
+        revising text, were created with assistance from ChatGPT (OpenAI). I reviewed, edited, and approved all AI-generated
+        content before including it in the final version of this website and the annotated bibliography.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Writing Project 2 – Stakeholder Analysis · Nuclear Energy · Created by [Your Name]
+  </footer>
+
+  <script>
+    // Filter logic
+    const btnAll = document.getElementById('btn-all');
+    const btnDirect = document.getElementById('btn-direct');
+    const btnIndirect = document.getElementById('btn-indirect');
+    const cards = document.querySelectorAll('.stakeholder-card');
+
+    function setActive(button) {
+      [btnAll, btnDirect, btnIndirect].forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    }
+
+    btnAll.addEventListener('click', () => {
+      setActive(btnAll);
+      cards.forEach(card => card.style.display = 'block');
+    });
+
+    btnDirect.addEventListener('click', () => {
+      setActive(btnDirect);
+      cards.forEach(card => {
+        card.style.display = card.classList.contains('direct') ? 'block' : 'none';
+      });
+    });
+
+    btnIndirect.addEventListener('click', () => {
+      setActive(btnIndirect);
+      cards.forEach(card => {
+        card.style.display = card.classList.contains('indirect') ? 'block' : 'none';
+      });
+    });
+
+    // Collapsible details: click h3 to open/close
+    cards.forEach(card => {
+      const header = card.querySelector('h3');
+      header.addEventListener('click', () => {
+        card.classList.toggle('open');
+      });
+    });
+
+    // Stakeholder map: scroll and highlight
+    const mapCards = document.querySelectorAll('.map-card');
+
+    mapCards.forEach(mapCard => {
+      mapCard.addEventListener('click', () => {
+        const targetId = mapCard.getAttribute('data-target');
+        const target = document.getElementById(targetId);
+        if (target) {
+          // show all when jumping from map, so user sees it
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          // expand if collapsed
+          target.classList.add('open');
+
+          // temporary highlight
+          cards.forEach(c => c.classList.remove('highlight'));
+          target.classList.add('highlight');
+          setTimeout(() => target.classList.remove('highlight'), 1200);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
